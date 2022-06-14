@@ -1,6 +1,7 @@
 import "./App.css";
 import Showcase from "./Showcase";
 import BaseStats from "./BaseStats";
+import PokeMoves from "./PokeMoves";
 
 function App() {
   const baseStats = {
@@ -20,6 +21,7 @@ function App() {
     <div className="background">
       <Showcase />
       <BaseStats stats={baseStats} clicker={handleClick} />
+      <PokeMoves />
     </div>
   );
 }
