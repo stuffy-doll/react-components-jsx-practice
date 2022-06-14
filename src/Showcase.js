@@ -1,3 +1,4 @@
+import "./Showcase.css";
 const bulbImage = require("./images/bulbasaur.jpg");
 
 function Showcase() {
@@ -7,8 +8,17 @@ function Showcase() {
     move: "Vine Whip"
   };
   return (
-    <div>
+    <div className="showcase">
       <h1>{`${favPokemon}`}'s Showcase Component</h1>
+      <img
+        src={bulbImage}
+        alt="Nothing Here"
+        style={{
+          width: "400px",
+          height: "400px",
+          borderRadius: "20px"
+        }}
+      ></img>
       <h2>
         Bulbasaur's type is{" "}
         <span
@@ -18,9 +28,17 @@ function Showcase() {
           }}
         >
           {pokeCharacteristics.types}
+        </span>{" "}
+        and it knows{" "}
+        <span
+          style={{
+            backgroundColor: "green",
+            color: "white"
+          }}
+        >
+          {pokeCharacteristics.move}
         </span>
       </h2>
-      <img src={bulbImage} alt="Nothing Here"></img>
     </div>
   );
 }
